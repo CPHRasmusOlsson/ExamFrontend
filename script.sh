@@ -1,0 +1,1 @@
+scp -r ./build root@165.232.122.174:/var/www/eksamen
