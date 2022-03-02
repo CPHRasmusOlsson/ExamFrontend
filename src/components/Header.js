@@ -39,7 +39,7 @@ const Nav = (props) => {
             </li>
             <li>
               <NavLink exact="true" activeclassname="active" to="/protected">
-                Protected
+                Trips
               </NavLink>
             </li>
           </>

@@ -44,6 +44,7 @@ const DemoScreen = (props) => {
               <Table striped bordered hover size="sm">
                 <thead>
                   <tr>
+                    {console.log(data.weather)}
                     {Object.keys(data.weather).map((header, index) => {
                       return <th key={index}>{header}</th>;
                     })}

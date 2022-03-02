@@ -5,12 +5,10 @@ import { Switch, Route, useHistory } from "react-router-dom";
 import Nav from "./components/Header";
 import PrivateRoute from "./components/PrivateRoute";
 import Home from "./screens/HomeScreen";
-import ProtectedScreen from "./screens/RaceScreen";
 import Facade from "./facades/apiFacade";
 import AdminScreen from "./screens/AdminScreen";
 import DemoScreen from "./screens/DemoScreen";
-import RaceScreen from "./screens/RaceScreen";
-//import PrivateRoute from "./components/PrivateRoute";
+import TripScreen from "./screens/TripScreen";
 
 function App() {
   const [loggedIn, setLoggedIn] = React.useState(Facade.loggedIn());
@@ -43,7 +41,8 @@ function App() {
         <PrivateRoute
           path="/protected"
           loggedIn={loggedIn}
-          component={RaceScreen}
+          user={user}
+          component={TripScreen}
         />
         <PrivateRoute
           path="/admin"
